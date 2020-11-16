@@ -10,20 +10,20 @@
 
 <body>
 
-  <section id="Calcolo-Biglietto">
-    <h2>Calcola il prezzo del tuo biglietto</h2>
-    <div class="card-round">
-      <div class="flex">
+  <section id="Calcolo-Biglietto text-center">
+    <h1 class="text-center">Calcola il prezzo del tuo biglietto</h1>
+    <div class="card round">
+      <div class="row flex">
         <div class="col">
-          <label for="name">Nome e cognome</label>
+          <label for="name">Nome e cognome</label> <br>
           <input id="full-name"type="text" name="name" value="">
         </div>
         <div class="col">
-          <label for="km"> Km da percorrere</label>
+          <label for="km"> Km da percorrere</label> <br>
           <input id="km"type="number" name="km" value="">
         </div>
         <div class="col">
-          <label for="fascia">Fascia di età</label>
+          <label for="fascia">Fascia di età</label> <br>
           <select id="fascia"class="" name="fascia">
             <option value="minorenne">Minorenne</option>
             <option value="maggiorenne">Maggironenne</option>
@@ -31,7 +31,7 @@
           </select>
         </div>
       </div>
-      <div class="row flex">
+      <div class="button-row flex">
         <button id="btn-genera"type="button" name="genera">Genera</button>
         <button id="btn-annulla"type="button" name="annulla">Annulla</button>
       </div>
@@ -40,38 +40,34 @@
 
 
   <section id="Biglietto">
-    <h2>Biglietto</h2>
-    <h3>Dettaglio Passeggeri</h3>
-    <div class="ticket-row flex">
-      <div class="Ticket-Name">
-        <h4>Nome passeggero</h4>
-        <h3 id="ticket-userName">awd</h3>
+    <h1 class="text-center">il tuo biglietto</h1>
+    <div class="ticket-card">
+      <h3>Dettaglio Passeggeri</h3>
+      <div class="ticket-row flex">
+        <div class="Ticket-Name">
+          <h4>Nome passeggero</h4>
+          <h3 id="ticket-userName">awd</h3>
+        </div>
+        <div class="Ticket-Info flex">
+          <div class="tiket-Card">
+            <h4>Offerta</h4>
+            <h4 id="ticket-offer">cloec</h4>
+          </div>
+          <div class="tiket-Card">
+            <h4>Carrozza</h4>
+            <h4 id="ticket-carro">mino</h4>
+          </div>
+          <div class="tiket-Card">
+            <h4>Codice CP</h4>
+            <h4 id="ticket-cp">midano</h4>
+          </div>
+          <div class="tiket-Card">
+            <h4>Costo Biglietto</h4>
+            <h4 id="ticket-cost">min342342o</h4>
+          </div>
+        </div>
       </div>
-      <div class="Ticket-Info flex">
-        <div class="tiket-Card">
-          <h4>Offerta</h4>
-          <h4 id="ticket-offer">cloec</h4>
-        </div>
-        <div class="tiket-Card">
-          <h4>Carrozza</h4>
-          <h4 id="ticket-carro">mino</h4>
-        </div>
-        <div class="tiket-Card">
-          <h4>Codice CP</h4>
-          <h4 id="ticket-cp">midano</h4>
-        </div>
-        <div class="tiket-Card">
-          <h4>Costo Biglietto</h4>
-          <h4 id="ticket-cost">min342342o</h4>
-        </div>
-
-
-      </div>
-
     </div>
-
-
-
   </section>
 
 
