@@ -5,23 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Biglietto del treno Js</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
   <section id="Calcolo-Biglietto">
     <h2>Calcola il prezzo del tuo biglietto</h2>
-    <div class="car-round">
-      <div class="row">
-        <div class="col3">
+    <div class="card-round">
+      <div class="flex">
+        <div class="col">
           <label for="name">Nome e cognome</label>
           <input id="full-name"type="text" name="name" value="">
         </div>
-        <div class="col3">
+        <div class="col">
           <label for="km"> Km da percorrere</label>
           <input id="km"type="number" name="km" value="">
         </div>
-        <div class="col3">
+        <div class="col">
           <label for="fascia">Fascia di età</label>
           <select id="fascia"class="" name="fascia">
             <option value="minorenne">Minorenne</option>
@@ -30,8 +31,9 @@
           </select>
         </div>
       </div>
-      <div class="row">
-        <button id="btn-genera"type="button" name="button"></button>
+      <div class="row flex">
+        <button id="btn-genera"type="button" name="genera">Genera</button>
+        <button id="btn-annulla"type="button" name="annulla">Annulla</button>
       </div>
     </div>
   </section>
@@ -39,6 +41,34 @@
 
   <section id="Biglietto">
     <h2>Biglietto</h2>
+    <h3>Dettaglio Passeggeri</h3>
+    <div class="ticket-row flex">
+      <div class="Ticket-Name">
+        <h4>Nome passeggero</h4>
+        <h3 id="ticket-userName">awd</h3>
+      </div>
+      <div class="Ticket-Info flex">
+        <div class="tiket-Card">
+          <h4>Offerta</h4>
+          <h4 id="ticket-offer"></h4>
+        </div>
+        <div class="tiket-Card">
+          <h4>Carrozza</h4>
+          <h4 id="ticket-carrozza">mino</h4>
+        </div>
+        <div class="tiket-Card">
+          <h4>Codice CP</h4>
+          <h4 id="ticket-cp">mino</h4>
+        </div>
+        <div class="tiket-Card">
+          <h4>Costo Biglietto</h4>
+          <h4 id="ticket-cost">mino</h4>
+        </div>
+
+
+      </div>
+
+    </div>
 
 
 
