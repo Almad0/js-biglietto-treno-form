@@ -30,6 +30,11 @@ body{
   justify-content: flex-start;
 }
 
-.ticket-Info{
+.Ticket-Name{
+  width: 30%;
+}
+
+.Ticket-Info{
+  width: 70%;
   justify-content: space-between;
 }

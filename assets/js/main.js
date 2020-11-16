@@ -1,26 +1,22 @@
 var btnGenera = document.getElementById('btn-genera');
 var btnAnnulla = document.getElementById('btn-annulla');
 
-
 btnGenera.addEventListener('click', function() {
+  var visible = document.getElementById("Biglietto");
+  visible.style.display = "block"
 
-  console.log("genera biglietto");
-
+// DICHIARO LE VARIABILI TRAMITE L'INPUT
   var userName = document.getElementById('full-name').value;
   var km = document.getElementById('km').value;
   var userAge = document.getElementById('fascia').value;
 
-  // var userName = userNameInput.value;
-  // var km = kmInput.value;
-  // var userAge = userAgeInput.value;
-
-  console.log(userName, km, userAge);
-
+// CALCOLO IL PREZZO E DICHIARO LE VARIABILI SCONTO
   var kmPrice = km * 0.21;
   var discount = 0;
   var offer;
-  console.log(kmPrice, discount);
+  // console.log(kmPrice, discount, userName, km, userAge);
 
+// VERIFICO LE CONDIZIONI DI SCONTO
   if (userAge == "minorenne") {
    discount = 20/100 * kmPrice;
    offer = "Sconto Under 18";
@@ -30,33 +26,33 @@ btnGenera.addEventListener('click', function() {
  } else {
    offer = "Nessuna offerta";
  }
+  // console.log(discount, offer);
 
-  console.log(discount, offer);
+//GENERO I DUE NUMERI CASUALI
+  var numCarro = Math.floor(Math.random() * 9) + 1 ;
+  var numCp = Math.floor(Math.random() * (100000 - 90000)) + 90000 ;
 
+//DEFINISCO LE VARIABILI E SOSTITUZIONE DEI VALORI NELL'HTML
   var elName = document.getElementById('ticket-userName');
   var elDiscount = document.getElementById('ticket-offer');
-  var elCarrozza = document.getElementById('ticket-carrozza');
+  var elCarro = document.getElementById('ticket-carro');
   var elCp = document.getElementById('ticket-cp');
   var elTicket = document.getElementById('ticket-cost');
 
   elName.innerHTML = userName;
   elDiscount.innerHTML = offer;
-  elCarrozza.innerHTML = km;
-  elCp.innerHTML = km;
-  elTicket.innerHTML = kmPrice - discount;
-
-
-
-
-
-
-
-
+  elCarro.innerHTML = numCarro;
+  elCp.innerHTML = numCp;
+  elTicket.innerHTML = (kmPrice - discount).toFixed(2);
 
 }
 );
 
-
+btnAnnulla.addEventListener('click', function(){
+  var hidden = document.getElementById("Biglietto");
+  hidden.style.display = "none"
+}
+);
 
 
 
