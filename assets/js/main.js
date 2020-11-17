@@ -6,9 +6,17 @@ btnGenera.addEventListener('click', function() {
   visible.style.display = "block"
 
 // DICHIARO LE VARIABILI TRAMITE L'INPUT
-  var userName = document.getElementById('full-name').value;
-  var km = document.getElementById('km').value;
-  var userAge = document.getElementById('fascia').value;
+  var userNameInput = document.getElementById('full-name');
+  var kmInput = document.getElementById('km');
+  var userAgeInput = document.getElementById('fascia');
+
+
+  var userName = userNameInput.value;
+  var km = kmInput.value;
+  var userAge = userAgeInput.value;
+// è MEGLIO SEPARARE LE COSE PER EVITARE
+// PRIMA DEFINISCI LE VARIABILI
+// POI A PARTE GLI ASSEGNI DEI VALORI VALUE CON ALTRE VARIABILI, IN MANIERA SEPARATA
 
 // CALCOLO IL PREZZO E DICHIARO LE VARIABILI SCONTO
   var kmPrice = km * 0.21;
@@ -49,8 +57,20 @@ btnGenera.addEventListener('click', function() {
 );
 
 btnAnnulla.addEventListener('click', function(){
+
+
+  var userNameInput = document.getElementById('full-name');
+  var kmInput = document.getElementById('km');
+  var userAgeInput = document.getElementById('fascia');
+
+
+  userNameInput.value = "";
+  kmInput.value = "";
+  userAgeInput.value = "";
+
   var hidden = document.getElementById("Biglietto");
-  hidden.style.display = "none"
+  hidden.style.display = "none";
+
 }
 );
 
